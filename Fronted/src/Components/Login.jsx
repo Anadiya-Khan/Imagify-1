@@ -52,8 +52,6 @@ const Login = () => {
         toast.error(error.message);
     }
 };
-
-
     useEffect(()=>{
         // lock scrolling
         document.body.style.overflow = 'hidden'; // when clicking on login only te login popup should come and will disable the scroll bar 
@@ -73,7 +71,7 @@ const Login = () => {
     viewport={{once:true}} className='relative bg-white p-10 rounded-xl text-slate-500' onSubmit={onSubmitHandler}>
         <h1 className='text-center text-2xl text-neutral-700 font-medium'>{state}</h1>
         {/* // registration  */}
-        <p>Welcome back! Please sign in to continue</p>
+        {/* <p>Welcome back! Please sign in to continue</p> */}
         {state !== 'Login' 
         && 
         <div className='border px-6 py-2 flex items-center gap-2 rounded-full mt-5'>
